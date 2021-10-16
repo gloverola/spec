@@ -58,7 +58,7 @@ export default function BottomTab() {
             // Onpress Update....
             tabPress: e => {
               Animated.spring(tabOffsetValue, {
-                toValue: -30,
+                toValue: 0,
                 useNativeDriver: true,
               }).start();
             },
@@ -82,7 +82,7 @@ export default function BottomTab() {
             // Onpress Update....
             tabPress: e => {
               Animated.spring(tabOffsetValue, {
-                toValue: getWidth() + 10,
+                toValue: getWidth() + 40,
                 useNativeDriver: true,
               }).start();
             },
@@ -109,7 +109,7 @@ export default function BottomTab() {
             // Onpress Update....
             tabPress: e => {
               Animated.spring(tabOffsetValue, {
-                toValue: getWidth() * 2.6,
+                toValue: getWidth() * 3.2,
                 useNativeDriver: true,
               }).start();
             },
@@ -133,7 +133,7 @@ export default function BottomTab() {
             // Onpress Update....
             tabPress: e => {
               Animated.spring(tabOffsetValue, {
-                toValue: getWidth() * 4.2,
+                toValue: getWidth() * 4.7,
                 useNativeDriver: true,
               }).start();
             },
@@ -142,13 +142,13 @@ export default function BottomTab() {
 
       <Animated.View
         style={{
-          width: getWidth(),
+          width: getWidth() - 10,
           height: 2,
           backgroundColor: 'red',
           position: 'absolute',
           bottom: 70,
           // Horizontal Padding = 20...
-          left: 50,
+          left: 20,
           borderRadius: 20,
           transform: [{translateX: tabOffsetValue}],
         }}></Animated.View>
